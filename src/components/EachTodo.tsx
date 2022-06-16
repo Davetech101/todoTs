@@ -1,6 +1,8 @@
-const EachTodo: React.FC<{text: string}> = (props) => {
+import "./styles.css";
+
+const EachTodo: React.FC<{text: string; onDelTodo: () => void }> = (props) => {
   return (
-    <li>{props.text}</li>
+    <li className="item" onClick={props.onDelTodo }>{props.text}</li>
   )
 }
 
